@@ -17,12 +17,15 @@ class MainController < ApplicationController
 	end
 
 	def itemlog
+
+		@lists = List.all
+
 		item2 = params[:item_name]
 		days2 = params[:quantity] 
 		# list = params[:list_id]
 
 		items = Item.new(item_name: item2, quantity: days2)
-		items.list = @list
+		items.list = @lists
 
 		items.save
 
