@@ -1,0 +1,12 @@
+%h3 Create To Do List
+%br
+%div#name
+	%label{:for => "txtfirstname"} What's your first name:
+	%input{:type => "text", :id => "txtfirstname", :class => "text2"}
+	-# this is one way to give a id in haml
+%div#list_name
+	%label{:for => "txtlistname"} Create a name for your To Do List:
+	%input#txtlistname.text2{:type => "text"}
+	-# this is another way to give a id in haml, still need to put the type separately
+%br
+%button{:id => "submitlist"} Submit

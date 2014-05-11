@@ -1,0 +1,14 @@
+%h3 View To Do List
+
+%table
+	%tr
+		%th Name
+		%th List Name
+
+	- @lists.each do |y|
+		%tr
+			%td= y.first_name
+			%td= y.list_name
+
+
+-# copy the correct model field names from the database or model
