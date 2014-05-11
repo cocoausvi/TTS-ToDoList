@@ -18,14 +18,12 @@ class MainController < ApplicationController
 
 	def itemlog
 
-		@lists = List.all
-
 		item2 = params[:item_name]
 		days2 = params[:quantity] 
 		# list = params[:list_id]
 
 		items = Item.new(item_name: item2, quantity: days2)
-		items.list = @lists
+		items.list = @list
 
 		items.save
 
